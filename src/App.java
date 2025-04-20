@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import com.dio.java.banco.ControleClasse;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -14,6 +15,9 @@ public class App {
         switch(escolha){
 
                 case 1: 
+                ControleClasse controle = new ControleClasse();
+
+                controle.main();
                 break; 
 
                 case 2: 

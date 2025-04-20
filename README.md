@@ -16,6 +16,7 @@ Depositar dinheiro;
 Sacar dinheiro;
 Pagar um boleto.
 Verificar se a conta está usando cheque especial.
+
 Siga as seguintes regras para implementar
 
 - A conta bancária deve ter um limite de cheque especial somado ao saldo da conta;
