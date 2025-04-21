@@ -1,11 +1,10 @@
 package com.dio.java.carro;
 
-import java.io.IOException;
 import java.util.Scanner;
 
-import com.dio.java.banco.ControleBanco;
 
-public class ControleClasse {
+
+public class ControleClasseCarro {
     
     ControleCarro controle;
 
@@ -23,48 +22,45 @@ public class ControleClasse {
         System.out.println("| 4 - Desacelerar |");
         System.out.println("| 5 - Virar para esquerda/direita |");
         System.out.println("| 6 - Verificar Velocidade |");
-        System.out.println("| 7 - Trocar a marcha |");
-        System.out.println("| 8 - Sair |");
+        System.out.println("| 7 - Sair |");
         
         int escolha = entrada.nextInt();
 
         do {
             switch (escolha){
                 case 1: 
-                    
+                    controle.ligarCarro();
                 break;
 
                 case 2:
-                    
+                    controle.desligarCarro();
                 break; 
 
                 case 3: 
-
+                    controle.acelerar();
                 break;
 
                 case 4:
-                    
+                    controle.desacelerar();
                 break;
 
                 case 5:
+                controle.virarCarro();
                 break;
 
                 case 6:
-
+                    controle.velocidade();
                 break;
 
                 case 7:
-
-                break;
-
-                case 8:
                     System.out.println("Saindo do sistema");
                 break;
+
                 default:
                  System.out.println("Opção inválda! ");
 
             }
-        } while (escolha != 8);
+        } while (escolha != 7);
         entrada.close();
     }
 

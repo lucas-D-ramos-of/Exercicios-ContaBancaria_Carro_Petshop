@@ -3,8 +3,6 @@ package com.dio.java.banco;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.LocalDate;
-import java.time.Period;
 
 public class ControleBanco {
 

@@ -1,8 +1,6 @@
 package com.dio.java.banco;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.time.temporal.ChronoField;
 
 public class ContaBanco {
 

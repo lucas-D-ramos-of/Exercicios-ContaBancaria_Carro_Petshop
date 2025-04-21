@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import com.dio.java.banco.ControleClasse;
-
+import com.dio.java.carro.*;
+import com.dio.java.petshop.*;
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -21,9 +22,16 @@ public class App {
                 break; 
 
                 case 2: 
+                ControleClasseCarro carro = new ControleClasseCarro(); 
+
+                carro.main();
                 break;
 
                 case 3:
+
+                ControleClassePetshop petshop = new ControleClassePetshop();
+
+                petshop.main();
                 break;
 
                 default:
