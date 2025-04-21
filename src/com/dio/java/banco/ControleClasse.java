@@ -11,26 +11,28 @@ public class ControleClasse {
         Scanner entrada = new Scanner(System.in);
 
         ControleBanco controle = new ControleBanco(Login());
-        
-
-        System.out.println("| Menu |");
-        System.out.println("| 1- Consultar Saldo |");
-        System.out.println("| 2 - Consultar Cheque Especial |");
-        System.out.println("| 3 - Sacar Dinheiro |");
-        System.out.println("| 4 - Pagar Boleto |");
-        System.out.println("| 5 - Verificar se a conta está usando cheque especial |");
-        System.out.println("| 6 - Sair |");
-        
-        int escolha = entrada.nextInt();
+        int escolha = 0;
 
         do {
+            System.out.println("| Menu |");
+            System.out.println("| 1- Consultar Saldo |");
+            System.out.println("| 2 - Consultar Cheque Especial |");
+            System.out.println("| 3 - Sacar Dinheiro |");
+            System.out.println("| 4 - Pagar Boleto |");
+            System.out.println("| 5 - Verificar se a conta está usando cheque especial |");
+            System.out.println("| 6 - Adicionar Valor |");
+            System.out.println("| 7 - Sair |");
+            
+            
+            escolha = entrada.nextInt();
+
             switch (escolha){
                 case 1: 
-                    controle.ConsultarSaldo();
+                    System.out.println("O saldo da conta é: "+ controle.ConsultarSaldo());
                 break;
 
                 case 2:
-                    controle.ConsultarChequeEspecial();
+                    System.out.println("O valor do cheque especial é: "+controle.ConsultarChequeEspecial());
                 break; 
 
                 case 3: 
@@ -38,8 +40,10 @@ public class ControleClasse {
                     float saque = entrada.nextFloat();
                     try{
                         controle.SacarSaldo(saque);
+
                     } catch (IOException e){
-                        e.getMessage();
+
+                        System.out.println(e.getMessage());
                     }
                     
                 break;
@@ -54,17 +58,21 @@ public class ControleClasse {
 
                     try {
                         controle.PagarBoleto(data, boleto);
+
                     } catch (IOException e){
-                        e.getMessage();
+                        System.out.println(e.getMessage());
                     }
                     
-
                 break;
 
                 case 5:
+                    System.out.println(controle.contaUsandoChequeEspecial());
                 break;
 
                 case 6:
+                    
+                break;
+                case 7:
                     System.out.println("Saindo da aplicação...");
                 break;
 
@@ -72,7 +80,7 @@ public class ControleClasse {
                  System.out.println("Opção inválda! ");
 
             }
-        } while (escolha != 6);
+        } while (escolha != 7);
         entrada.close();
 
     }
